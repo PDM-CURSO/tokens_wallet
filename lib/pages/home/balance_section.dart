@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wallet/pages/home/add/add_page.dart';
 
 class BalanceSection extends StatelessWidget {
   const BalanceSection({Key? key}) : super(key: key);
@@ -16,13 +15,7 @@ class BalanceSection extends StatelessWidget {
           trailing: FloatingActionButton.extended(
             label: Text("Add token"),
             icon: FaIcon(FontAwesomeIcons.sackDollar),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => AddPage(),
-                ),
-              );
-            },
+            onPressed: () {},
           ),
         ),
       ],

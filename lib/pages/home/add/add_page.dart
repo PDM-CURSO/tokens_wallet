@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
-import 'package:wallet/providers/tokens_provider.dart';
 
 class AddPage extends StatefulWidget {
   AddPage({Key? key}) : super(key: key);
@@ -32,20 +30,11 @@ class _AddPageState extends State<AddPage> {
             title: Text("Pick an Icon"),
             trailing: IconButton(
               icon: FaIcon(FontAwesomeIcons.crosshairs),
-              onPressed: () {
-                // TODO
-              },
+              onPressed: () {},
             ),
           ),
           ElevatedButton(
-            onPressed: () {
-              context.read<TokensProvider>().addNewToken({
-                "string": _tokenController.text,
-                "value": _tokenValueController.text,
-                "company": _companyController.text,
-                "exchange": _moneyController.text,
-              });
-            },
+            onPressed: () {},
             child: Text("Guardar"),
           ),
           TextButton(
@@ -58,47 +47,6 @@ class _AddPageState extends State<AddPage> {
       ),
     );
   }
-
-  // _pickIcon(BuildContext context) async {
-  //   var listIcons = [
-  //     FontAwesomeIcons.bitcoin,
-  //     FontAwesomeIcons.litecoinSign,
-  //     FontAwesomeIcons.ethereum,
-  //     FontAwesomeIcons.aws,
-  //     FontAwesomeIcons.apple,
-  //     FontAwesomeIcons.meta,
-  //   ];
-  //   int selectedIcon = 0;
-  //   return await showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return AlertDialog(
-  //           content: GridView.builder(
-  //             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-  //               crossAxisCount: 3,
-  //             ),
-  //             itemCount: 6,
-  //             itemBuilder: (BuildContext context, int index) {
-  //               return FaIcon(listIcons[index]);
-  //             },
-  //           ),
-  //           actions: [
-  //             TextButton(
-  //               onPressed: () {
-  //                 Navigator.of(context).pop();
-  //               },
-  //               child: Text("Cancelar"),
-  //             ),
-  //             ElevatedButton(
-  //               onPressed: () {
-  //                 Navigator.of(context).pop(listIcons[selectedIcon]);
-  //               },
-  //               child: Text("Aceptar"),
-  //             ),
-  //           ],
-  //         );
-  //       });
-  // }
 
   Widget _editableTextInput(TextEditingController controller, String label) {
     return TextField(

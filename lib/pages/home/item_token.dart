@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ItemToken extends StatelessWidget {
-  final tokenObj;
-  ItemToken({Key? key, this.tokenObj}) : super(key: key);
+  ItemToken({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +12,15 @@ class ItemToken extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(tokenObj["string"]),
-            Text(tokenObj["value"]),
+            Text("0xs8787"),
+            Text("999.9 LTC"),
           ],
         ),
         subtitle: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(tokenObj["company"]),
-            Text("\$${tokenObj["exchange"]}"),
+            Text("Moinet"),
+            Text("\$899.12"),
           ],
         ),
       ),
